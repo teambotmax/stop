@@ -17,7 +17,7 @@ cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 lineProfile = cl.getProfile()
 lineSettings = cl.getSettings()
 mid = cl.getProfile().mid
-responsename1 = cl.getProfile().displayName
+responsename = cl.getProfile().displayName
 
 ki = LineClient("sbardian7@gmail.com","sbardian71993")
 ki.log("Auth Token : " + str(ki.authToken))
@@ -136,7 +136,7 @@ lineSettings = js.getSettings()
 JSmid = js.getProfile().mid
 responsename14 = js.getProfile().displayName
 
-print("---LOGIN SUCCES---")
+print("---LOGIN SUCCES---\nBY: SELFBOT-BY:MAX")
 
 poll = LinePoll(cl)
 call = cl
@@ -433,8 +433,8 @@ def help():
                   "║☯➸ " + key + "Speed/Sp\n" + \
                   "║☯➸ " + key + "Respontime\n" + \
                   "║☯➸ " + key + "Sepinya\n" + \
-                  "║☯➸ " + key + "Joinall\n" + \
-                  "║☯➸ " + key + "Byeall\n" + \
+                  "║☯➸ " + key + "Max:join\n" + \
+                  "║☯➸ " + key + "Max:bye\n" + \
                   "║☯➸ " + key + "Bye me\n" + \
                   "║☯➸ " + key + "Leave「Namagrup」\n" + \
                   "║☯➸ " + key + "Ginfo\n" + \
@@ -3110,10 +3110,18 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
-                                    anggota = [Bmid,Cmid,Amid]
+                                    anggota = [Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid]
                                     cl.inviteIntoGroup(msg.to, anggota)
                                     ki.acceptGroupInvitation(msg.to)
+                                    kk.acceptGroupInvitation(msg.to)
                                     kc.acceptGroupInvitation(msg.to)
+                                    km.acceptGroupInvitation(msg.to)
+                                    kb.acceptGroupInvitation(msg.to)
+                                    kn.acceptGroupInvitation(msg.to)
+                                    ko.acceptGroupInvitation(msg.to)
+                                    kw.acceptGroupInvitation(msg.to)
+                                    ke.acceptGroupInvitation(msg.to)
+                                    ky.acceptGroupInvitation(msg.to)
                                 except:
                                     pass
                                 
@@ -3127,7 +3135,7 @@ def bot(op):
                                 except:
                                     pass
     
-                        elif cmd == "joinall":
+                        elif cmd == "max:join":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
@@ -3150,7 +3158,7 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                                 ky.updateGroup(G)
 
-                        elif cmd == "byeall":
+                        elif cmd == "max:bye":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
