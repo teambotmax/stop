@@ -19,7 +19,7 @@ lineSettings = cl.getSettings()
 mid = cl.getProfile().mid
 responsename1 = cl.getProfile().displayName
 
-print("---LOGIN SUCCES---")
+print("BY SELFBOT-BY:MAX")
 
 poll = LinePoll(cl)
 call = cl
@@ -2447,7 +2447,7 @@ def bot(op):
                                 sx.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
 #===========BOT UPDATE============#
-                        elif cmd == "sepinya" or text.lower() == '😆':
+                        elif cmd == "tag" or text.lower() == '😆':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                group = cl.getGroup(msg.to)
