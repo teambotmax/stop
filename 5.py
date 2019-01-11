@@ -345,18 +345,22 @@ def help():
     key = key.title()
     helpMessage = "▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬\n" + \
                   "╔══[ SELFBOT-BY:MAX ]\n"+\
+                  "║☯➸ " + key + "Help\n" + \
+                  "║☯➸ " + key + "Help bot\n" + \
                   "║☯➸ " + key + "Me\n" + \
                   "║☯➸ " + key + "Mid「@」\n" + \
                   "║☯➸ " + key + "Info「@」\n" + \
                   "║☯➸ " + key + "Nk「@」\n" + \
                   "║☯➸ " + key + "Kick1「@」\n" + \
+                  "║☯➸ " + key + "Kick group\n" + \
                   "║☯➸ " + key + "Mybot\n" + \
                   "║☯➸ " + key + "Status\n" + \
                   "║☯➸ " + key + "About\n" + \
                   "║☯➸ " + key + "Restart\n" + \
                   "║☯➸ " + key + "Runtime\n" + \
                   "║☯➸ " + key + "Creator\n" + \
-                  "║☯➸ " + key + "Speed/Sp\n" + \
+                  "║☯➸ " + key + "Sp\n" + \
+                  "║☯➸ " + key + "Spb\n" + \
                   "║☯➸ " + key + "Respontime\n" + \
                   "║☯➸ " + key + "Sepinya\n" + \
                   "║☯➸ " + key + "join\n" + \
@@ -1846,6 +1850,16 @@ def bot(op):
                             del Setmain["ARfoto"][Cmid]
                             kc.updateProfilePicture(path)
                             kc.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Dmid in Setmain["ARfoto"]:
+                            path = km.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Dmid]
+                            km.updateProfilePicture(path)
+                            km.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Emid in Setmain["ARfoto"]:
+                            path = kb.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Emid]
+                            kb.updateProfilePicture(path)
+                            kb.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Zmid in Setmain["ARfoto"]:
                             path = sw.downloadObjectMsg(msg_id)
                             del Setmain["ARfoto"][Zmid]
@@ -1858,6 +1872,8 @@ def bot(op):
                      path1 = ki.downloadObjectMsg(msg_id)
                      path2 = kk.downloadObjectMsg(msg_id)
                      path3 = kc.downloadObjectMsg(msg_id)
+                     path4 = km.downloadObjectMsg(msg_id)
+                     path5 = kb.downloadObjectMsg(msg_id)
                      settings["changePicture"] = False
                      ki.updateProfilePicture(path1)
                      ki.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
@@ -1865,6 +1881,10 @@ def bot(op):
                      kk.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
                      kc.updateProfilePicture(path3)
                      kc.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+                     km.updateProfilePicture(path4)
+                     km.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+                     kb.updateProfilePicture(path5)
+                     kb.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
 
                if msg.contentType == 0:
                     if Setmain["autoRead"] == True:
@@ -1872,6 +1892,8 @@ def bot(op):
                         ki.sendChatChecked(msg.to, msg_id)
                         kk.sendChatChecked(msg.to, msg_id)
                         kc.sendChatChecked(msg.to, msg_id)
+                        km.sendChatChecked(msg.to, msg_id)
+                        kb.sendChatChecked(msg.to, msg_id)
                     if text is None:
                         return
                     else:
@@ -1892,7 +1914,7 @@ def bot(op):
                                 wait["selfbot"] = False
                                 cl.sendText(msg.to, "Selfbot dinonaktifkan")
                                             
-                        elif cmd == "help2":
+                        elif cmd == "help bot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage1 = helpbot()
@@ -1952,9 +1974,17 @@ def bot(op):
                                sendMention(msg.to, sender, "「 Type Selfbot 」\n")
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
-                        elif cmd == "me" or text.lower() == 'me':
+#                        elif cmd == "me" or text.lower() == 'me':
+#                          if wait["selfbot"] == True:
+#                            if msg._from in admin:
+#                               msg.contentType = 13
+#                               msg.contentMetadata = {'mid': mid}
+#                               cl.sendMessage1(msg)
+
+                        elif cmd == "me" or text.lower() == 'aim':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
+                               sendMention(msg.to, sender, "「 ผู้ใช้เชลบอท 」\n", "")
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': mid}
                                cl.sendMessage1(msg)
@@ -2006,28 +2036,7 @@ def bot(op):
                                msg.contentMetadata = {'mid': Emid}
                                cl.sendMessage1(msg)
                                msg.contentType = 13
-                               msg.contentMetadata = {'mid': Fmid}
-                               cl.sendMessage1(msg)
-                               msg.contentType = 13
-                               msg.contentMetadata = {'mid': Gmid}
-                               cl.sendMessage1(msg)
-                               msg.contentType = 13
-                               msg.contentMetadata = {'mid': Hmid}
-                               cl.sendMessage1(msg)
-                               msg.contentType = 13
-                               msg.contentMetadata = {'mid': Imid}
-                               cl.sendMessage1(msg)
-                               msg.contentType = 13
-                               msg.contentMetadata = {'mid': Jmid}
-                               cl.sendMessage1(msg)
-                               msg.contentType = 13
                                msg.contentMetadata = {'mid': Zmid}
-                               cl.sendMessage1(msg)
-                               msg.contentType = 13
-                               msg.contentMetadata = {'mid': Xmid}
-                               cl.sendMessage1(msg)
-                               msg.contentType = 13
-                               msg.contentMetadata = {'mid': JSmid}
                                cl.sendMessage1(msg)
 
                         elif text.lower() == "hapus chat":
@@ -2119,7 +2128,7 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(cl.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                cl.sendMessage(msg.to, "❧ĐPĶ Fams Grup Info\n\n❧Nama Group : {}".format(G.name)+ "\n❧ID Group : {}".format(G.id)+ "\n❧Pembuat : {}".format(G.creator.displayName)+ "\n❧Waktu Dibuat : {}".format(str(timeCreated))+ "\n❧Jumlah Member : {}".format(str(len(G.members)))+ "\n❧Jumlah Pending : {}".format(gPending)+ "\n❧Group Qr : {}".format(gQr)+ "\n❧Group Ticket : {}".format(gTicket))
+                                cl.sendMessage(msg.to, "❧Bot Fams Grup Info\n\n❧Nama Group : {}".format(G.name)+ "\n❧ID Group : {}".format(G.id)+ "\n❧Pembuat : {}".format(G.creator.displayName)+ "\n❧Waktu Dibuat : {}".format(str(timeCreated))+ "\n❧Jumlah Member : {}".format(str(len(G.members)))+ "\n❧Jumlah Pending : {}".format(gPending)+ "\n❧Group Qr : {}".format(gQr)+ "\n❧Group Ticket : {}".format(gTicket))
                                 cl.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
                                 cl.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
                             except Exception as e:
@@ -4007,6 +4016,34 @@ def bot(op):
                                            random.choice(ABC).kickoutFromGroup(msg.to, [target])
                                        except:
                                            pass
+#KICKALL
+                        elif "Kickgroup" in msg.text:
+                          if msg._from in admin:
+                           if msg.toType == 2:
+                              print("ok")
+                              _name = msg.text.replace("Kickgroup","")
+                              gs = cl.getGroup(msg.to)
+                              gs = ki.getGroup(msg.to)
+                              gs = kk.getGroup(msg.to)
+                              gs = kc.getGroup(msg.to)
+                              gs = km.getGroup(msg.to)
+                              gs = kb.getGroup(msg.to)
+                              targets = []
+                              for g in gs.members:
+                                 if _name in g.displayName:
+                                     targets.append(g.mid)
+                              if targets == []:
+                                 cl.sendText(msg.to,"Tidak Ditemukan.")
+                              else:
+                                  for target in targets:
+                                   if not target in admin and Bots:
+                                      try:
+                                          klist=[cl,ki,kk,kc,km,kb]
+                                          kicker=random.choice(klist)
+                                          kicker.kickoutFromGroup(msg.to,[target])
+                                          print (msg.to,[g.mid])
+                                      except Exception as e:
+                                          break
 
                         elif ("Bangsat" in msg.text):
                           if wait["selfbot"] == True:
