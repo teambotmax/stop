@@ -164,7 +164,7 @@ wait = {
     'autoRead':False,
     'autoLeave':False,
     'autoLeave1':False,
-    "detectMention":True,
+    "detectMention":False,
     "Mentionkick":False,
     "welcomeOn":False,
     "sticker":False,
@@ -467,7 +467,7 @@ def help():
                   "║☯➸ " + key + "Listbot\n" + \
                   "║☯➸ " + key + "Listadmin\n" + \
                   "║☯➸ " + key + "Listprotect\n" + \
-                  "╚══[     Famz_Botz_FI      ]\n" + \
+                  "╚══[ SELFBOT-BY:MAX ]\n" + \
                   "▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬\n" + \
                   "\nKetik「 Refresh 」jika makanannya sudah habis...\n"
     return helpMessage
@@ -506,7 +506,7 @@ def helpbot():
                   "║☯➸ " + key + "Myname:「Nama」\n" + \
                   "║☯➸ " + key + "Gift:「Mid korban」「Jumlah」\n" + \
                   "║☯➸ " + key + "Spam:「Mid korban」「Jumlah」\n" + \
-                  "╚══[     Famz_Botz_FI      ]\n" + \
+                  "╚══[ SELFBOT-BY:MAX ]\n" + \
                   "▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬\n" + \
                   "\nKetik「 Refresh 」jika makannya sudah kenyang...\n"
     return helpMessage1
@@ -1903,44 +1903,44 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "❧ĐFamz_Botz_FI\n"
-                                if wait["sticker"] == True: md+="❧Sticker「ON」\n"
-                                else: md+="❧Sticker「OFF」\n"
-                                if wait["contact"] == True: md+="❧Contact「ON」\n"
-                                else: md+="❧Contact「OFF」\n"
-                                if wait["talkban"] == True: md+="❧Talkban「ON」\n"
-                                else: md+="❧Talkban「OFF」\n"
-                                if wait["Mentionkick"] == True: md+="❧Notag「ON」\n"
-                                else: md+="❧Notag「OFF」\n"
-                                if wait["detectMention"] == True: md+="❧Respon「ON」\n"
-                                else: md+="❧Respon「OFF」\n"
-                                if wait["autoJoin"] == True: md+="❧Autojoin「ON」\n"
-                                else: md+="❧Autojoin「OFF」\n"
-                                if wait["autoAdd"] == True: md+="❧Autoadd「ON」\n"
-                                else: md+="❧Autoadd「OFF」\n"
-                                if msg.to in welcome: md+="❧Welcome「ON」\n"
-                                else: md+="❧Welcome「OFF」\n"
-                                if wait["autoLeave"] == True: md+="❧Autoleave「ON」\n"
-                                else: md+="❧Autoleave「OFF」\n"
-                                if msg.to in protectqr: md+="❧Protecturl「ON」\n"
-                                else: md+="❧Protecturl「OFF」\n"
-                                if msg.to in protectjoin: md+="❧Protectjoin「ON」\n"
-                                else: md+="❧Protectjoin「OFF」\n"
-                                if msg.to in protectkick: md+="❧Protectkick「ON」\n"
-                                else: md+="❧Protectkick「OFF」\n"
-                                if msg.to in protectinvite: md+="❧Protectinvite「ON」\n"
-                                else: md+="❧Protectinvite「OFF」\n"
-                                if msg.to in protectcancel: md+="❧Protectcancel「ON」\n"
-                                else: md+="❧Protectcancel「OFF」\n"
-                                if msg.to in protectantijs: md+="❧Antijs「ON」\n"
-                                else: md+="❧Antijs「OFF」\n"  
-                                if msg.to in ghost: md+="❧Ghost「ON」\n"
-                                else: md+="❧Ghost「OFF」\n"                                   
+                                md = "🕵 SELFBOT-BY:MAX 🕵\n"
+                                if wait["sticker"] == True: md+="😈 Sticker「 ✔ 」\n"
+                                else: md+="😈 Sticker「 ✖ 」\n"
+                                if wait["contact"] == True: md+="😈 Contact「 ✔ 」\n"
+                                else: md+="😈 Contact「 ✖ 」\n"
+                                if wait["talkban"] == True: md+="😈 Talkban「 ✔ 」\n"
+                                else: md+="😈 Talkban「 ✖ 」\n"
+                                if wait["Mentionkick"] == True: md+="😈 Notag「 ✔ 」\n"
+                                else: md+="😈 Notag「 ✖ 」\n"
+                                if wait["detectMention"] == True: md+="😈 Respon「 ✔ 」\n"
+                                else: md+="😈 Respon「 ✖ 」\n"
+                                if wait["autoJoin"] == True: md+="😈 Autojoin「 ✔ 」\n"
+                                else: md+="😈 Autojoin「 ✖ 」\n"
+                                if wait["autoAdd"] == True: md+="😈 Autoadd「 ✔ 」\n"
+                                else: md+="😈 Autoadd「 ✖ 」\n"
+                                if msg.to in welcome: md+="😈 Welcome「 ✔ 」\n"
+                                else: md+="😈 Welcome「 ✖ 」\n"
+                                if wait["autoLeave"] == True: md+="😈 Autoleave「 ✔ 」\n"
+                                else: md+="😈 Autoleave「 ✖ 」\n"
+                                if msg.to in protectqr: md+="😈 Protecturl「 ✔ 」\n"
+                                else: md+="😈 Protecturl「 ✖ 」\n"
+                                if msg.to in protectjoin: md+="😈 Protectjoin「 ✔ 」\n"
+                                else: md+="😈 Protectjoin「 ✖ 」\n"
+                                if msg.to in protectkick: md+="😈 Protectkick「 ✔ 」\n"
+                                else: md+="😈 Protectkick「 ✖ 」\n"
+                                if msg.to in protectinvite: md+="😈 Protectinvite「 ✔ 」\n"
+                                else: md+="😈 Protectinvite「 ✖ 」\n"
+                                if msg.to in protectcancel: md+="😈 Protectcancel「 ✔ 」\n"
+                                else: md+="😈 Protectcancel「 ✖ 」\n"
+                                if msg.to in protectantijs: md+="😈 Antijs「 ✔ 」\n"
+                                else: md+="😈 Antijs「 ✖ 」\n"  
+                                if msg.to in ghost: md+="😈 Ghost「 ✔ 」\n"
+                                else: md+="😈 Ghost「 ✖ 」\n"                                   
                                 cl.sendMessage(msg.to, md+"\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendText(msg.to,"Creator ◄━━◈⟦Bardi_Ud0⟧◈━━►") 
+                                cl.sendText(msg.to,"Creator ◄━◈⟦SELFBOT-BY:MAX⟧◈━►") 
                                 ma = ""
                                 for i in creator:
                                     ma = cl.getContact(i)
