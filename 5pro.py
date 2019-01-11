@@ -159,6 +159,7 @@ wait = {
     "talkban":True,
     "contact":False,
     'autoJoin':True,
+    'autoBlock':True
     'autoAdd':False,
     'autoRead':False,
     'autoLeave':False,
@@ -805,6 +806,13 @@ def bot(op):
                         pass
                     else:
                         cl.sendText(op.param1, wait["message"])
+
+        if op.type == 5:
+            print ("[ 5 ] NOTIFIED AUTO BLOCK CONTACT")
+            if wait["autoBlock"] == True:
+                cl.sendText(op.param1, wait["message"])
+                cl.sendContact(op.param1, "u3ced60bd6a6e3b0bbc3f021b96a9fee7")
+                cl.blockContact(op.param1)
 
         if op.type == 19:
             if op.param1 in protectkick:
