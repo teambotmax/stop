@@ -64,7 +64,7 @@ lineSettings = kb.getSettings()
 Emid = kb.getProfile().mid
 responsename5 = kb.getProfile().displayName
 
-sw = LineClient("tiarazeta94@gmail.com","sbardian71993")
+sw = LineClient()
 sw.log("Auth Token : " + str(sw.authToken))
 channel11 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
@@ -88,8 +88,8 @@ Cmid = kc.getProfile().mid
 Dmid = km.getProfile().mid
 Emid = kb.getProfile().mid
 Zmid = sw.getProfile().mid
-KAC = [cl,ki,kk,kc,km,kb]
-ABC = [ki,kk,kc,km,kb]
+KAC = [cl,ki,kk,kc,km,kb,sw]
+ABC = [cl,ki,kk,kc,km,kb,sw]
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Zmid]
 Dpk = admin + staff
 
@@ -327,7 +327,7 @@ def sendMention(to, mid, firstmessage):
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
-        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n⏩ Group : "+str(len(gid))+"\n⏩ Teman : "+str(len(teman))+"\n⏩ Expired : In "+hari+"\n⏩ Version : ANTIJS2\n⏩ Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n⏩ Runtime : \n • "+bot
+        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n⏩ Group : "+str(len(gid))+"\n⏩ Teman : "+str(len(teman))+"\n⏩ Expired : In "+hari+"\n⏩ Version : MAX v10\n⏩ Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n⏩ Runtime : \n • "+bot
         cl.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
