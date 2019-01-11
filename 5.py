@@ -77,10 +77,10 @@ print("---LOGIN SUCCES---\nBY: SELFBOT-BY:MAX")
 
 poll = LinePoll(cl)
 call = cl
-creator = ["u3ced60bd6a6e3b0bbc3f021b96a9fee7"]
-owner = ["u3ced60bd6a6e3b0bbc3f021b96a9fee7"]
-admin = ["u3ced60bd6a6e3b0bbc3f021b96a9fee7"]
-staff = ["u3ced60bd6a6e3b0bbc3f021b96a9fee7"]
+creator = ["u78a57486cd0847dd56f96f652ffa1a0f"]
+owner = ["u78a57486cd0847dd56f96f652ffa1a0f"]
+admin = ["u78a57486cd0847dd56f96f652ffa1a0f"]
+staff = ["u78a57486cd0847dd56f96f652ffa1a0f"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -159,7 +159,7 @@ wait = {
     "talkban":True,
     "contact":False,
     'autoJoin':True,
-    'autoBlock':True
+    'autoBlock':True,
     'autoAdd':False,
     'autoRead':False,
     'autoLeave':False,
@@ -811,7 +811,7 @@ def bot(op):
             print ("[ 5 ] NOTIFIED AUTO BLOCK CONTACT")
             if wait["autoBlock"] == True:
                 cl.sendText(op.param1, wait["message"])
-                cl.sendContact(op.param1, "u3ced60bd6a6e3b0bbc3f021b96a9fee7")
+                cl.sendContact(op.param1, "u78a57486cd0847dd56f96f652ffa1a0f")
                 cl.blockContact(op.param1)
 
         if op.type == 19:
